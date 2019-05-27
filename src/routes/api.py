@@ -17,3 +17,11 @@ def api(http, api):
 	def createinvoice(version):
 
 		return result(version, 'createinvoice')
+
+
+
+	# Get Invoice
+	@http.flask.route('/api/<string:version>/invoices/<string:id>', methods=['GET'])
+	def getinvoice(version):
+
+		return result(version, 'getinvoice')

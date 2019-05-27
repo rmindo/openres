@@ -7,6 +7,12 @@ import jwt
 class Auth:
 
 
+	def utf8(self, data):
+
+		return str(data.decode('utf8').replace('=', ''))
+
+
+
 	def basic(self, email, password):
 
 		return
