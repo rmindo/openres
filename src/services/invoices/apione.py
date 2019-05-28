@@ -20,21 +20,16 @@ class apione():
 
 		a = self.http.authenticate()
 
-		if 'error' in a:
-			return self.http.response(a['error'], 401)
+		if a == True:
+			return self.http.response(output, code)
 		else:
-			o = output()
-
-			if 'error' in o:
-				return self.http.response(o['error'], 400)
-
-			return self.http.response(o, code)
+			return self.http.response(a)
 
 
 
 
-	def createinvoice(self, http):
+	def createinvoice(self, req):
 
-		data = http.json
+		data = req.json
 
-		return data
+		return self.result(data, 201)

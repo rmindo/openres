@@ -23,7 +23,7 @@ api['v1'] = apione(http)
 
 
 # API Routes
-http.api(http, api)
+http.api(api)
 
 
 
